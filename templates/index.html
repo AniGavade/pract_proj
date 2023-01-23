@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+        .main{
+            width: 1000px;
+            background-color: red;
+            color: white;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    {% for n in clist %}
+    <div>{{forloop.counter}} {{n}}</div>
+    {% endfor %}
+
+    <br/>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+
+        {% for i in student_details%}
+        <tr>
+            <td>{{i.Name}}</td>
+            <td>{{i.Phone}}</td>
+        </tr>
+        {% endfor %}
+
+</table>
+    <br/>
+    {% for j in numbers %}
+    {{j}}
+    {% endfor %}
+</body>
+</html>
